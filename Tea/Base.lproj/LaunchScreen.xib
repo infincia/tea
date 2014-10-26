@@ -9,10 +9,26 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf-29432" translatesAutoresizingMaskIntoConstraints="NO" id="ITs-IU-FeQ">
+                    <rect key="frame" x="30" y="30" width="420" height="420"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ITs-IU-FeQ" secondAttribute="bottom" constant="30" id="254-U4-aCJ"/>
+                <constraint firstAttribute="trailing" secondItem="ITs-IU-FeQ" secondAttribute="trailing" constant="30" id="F79-Wm-2h4"/>
+                <constraint firstAttribute="centerY" secondItem="ITs-IU-FeQ" secondAttribute="centerY" id="N7g-Nx-yq5"/>
+                <constraint firstItem="ITs-IU-FeQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="ZJN-z9-eI4"/>
+                <constraint firstAttribute="centerX" secondItem="ITs-IU-FeQ" secondAttribute="centerX" id="dfb-Hf-L0l"/>
+                <constraint firstItem="ITs-IU-FeQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="ydK-ns-tpQ"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="leaf-29432" width="1473" height="1920"/>
+    </resources>
 </document>
