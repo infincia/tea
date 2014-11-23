@@ -1,4 +1,4 @@
-platform :ios, "8.0"
+platform :ios, '8.0'
 
-pod "AFNetworking"
-pod "iCarousel"
+pod 'AFNetworking', '2.5.0'
+pod 'iCarousel', '1.8.1'
