@@ -7,14 +7,8 @@
 //
 
 @import UIKit;
+#import "SteepController.h"
 
-@protocol TeaTimerDelegate <NSObject>
-@required
--(void)teaTimerDidFinish:(id)sender;
-@end
 
-@interface TimerViewController : UIViewController
-@property id<TeaTimerDelegate> delegate;
-@property NSNumber *teaCountdownMinutes;
--(void)startCountdown;
+@interface TimerViewController : UIViewController <SteepTimerDelegate>
 @end

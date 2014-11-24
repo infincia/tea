@@ -8,8 +8,7 @@
 
 #import "MakeTeaViewController.h"
 
-@import AVFoundation;
-@import AVKit;
+@import AudioToolbox;
 
 @interface MakeTeaViewController () {
     UITapGestureRecognizer *tapper;
@@ -37,7 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[SteepController sharedSteepController] setControllerDelegate:self];
+
     NSNumberFormatter *volumeFormatter = [[NSNumberFormatter alloc] init];
     [volumeFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     volumeFormatter.positiveSuffix = @"oz";
@@ -56,6 +56,8 @@
     [self configureCupForTeaType:[self.teaType selectedRowInComponent:0]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
 }
+
+
 
 -(void)viewDidAppear:(BOOL)animated {
     if ([[SteepController sharedSteepController] isHealthDataAvailable]) {
@@ -90,12 +92,20 @@
     [self.view endEditing:YES];
 }
 
+
+
+
+
 #pragma mark
 #pragma mark SteepControllerDelegate
 
 -(void)delegateShouldDisplayError:(NSString *)title withMessage:(NSString *)message {
     //NSString *appName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
 }
+
+
+
+
 
 #pragma mark 
 #pragma mark Internal configuration
@@ -280,27 +290,61 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"TeaTimerSegue"]) {
         TimerViewController *teaTimerViewController = [segue destinationViewController];
-        teaTimerViewController.delegate = self;
-        teaTimerViewController.teaCountdownMinutes = self.steepTimeMinutes;
-        [teaTimerViewController startCountdown];
-        //self.navigationItem.backBarButtonItem.tintColor = [UIColor redColor];
-        //self.navigationItem.backBarButtonItem.title = @"Cancel";
+        [[SteepController sharedSteepController] setTimerDelegate:teaTimerViewController];
+        [[SteepController sharedSteepController] startSteepTimerForMinutes:self.steepTimeMinutes];
     }
 }
 
-#pragma mark
-#pragma mark TeaTimerDelegate actions
 
--(void)teaTimerDidFinish:(id)sender {
-    [self submitCup];
+
+
+
+#pragma mark
+#pragma mark SteepControllerDelegate actions
+
+-(void)steepDidFinish:(id)sender {
+    [self submitCupToHealthkit];
+    [self dismissViewControllerAnimated:YES completion:^{
+        if ([[SteepController sharedSteepController] isBackgrounded]) {
+            UILocalNotification *steepFinishedNotification = [[UILocalNotification alloc] init];
+            steepFinishedNotification.alertBody = @"Tea finished";
+            steepFinishedNotification.soundName = UILocalNotificationDefaultSoundName;
+            NSLog(@"Local sound name: %@", UILocalNotificationDefaultSoundName);
+            //steepFinishedNotification.applicationIconBadgeNumber = 1;
+            [[UIApplication sharedApplication] scheduleLocalNotification:steepFinishedNotification];
+        }
+        else {
+            AudioServicesPlayAlertSound(1009);
+            [self displayAlert:@"" withMessage:@"Tea finished"];
+        }
+    }];
+
 }
+
+
+-(void)displayAlert:(NSString *)title withMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //
+    }];
+    [alertController addAction:alertAction];
+    [self presentViewController:alertController animated:YES completion:^{
+        //
+    }];
+}
+
 
 #pragma mark
 #pragma mark SteepController actions
 
--(void)submitCup {
+-(void)submitCupToHealthkit {
     [[SteepController sharedSteepController] addCupWithSize:self.cupOunces temperature:self.waterTemp caffeine:self.caffeine type:[self.teaType selectedRowInComponent:0]];
 }
+
+
+
+
+
 
 #pragma mark
 #pragma mark UIPickerViewDelegate
@@ -315,6 +359,10 @@
     [self.view endEditing:YES];
 }
 
+
+
+
+
 #pragma mark
 #pragma mark UIPickerViewDataSource
 
@@ -327,6 +375,9 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return 6;
 }
+
+
+
 
 
 #pragma mark

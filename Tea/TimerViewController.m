@@ -9,14 +9,15 @@
 #import "TimerViewController.h"
 @import QuartzCore;
 
-@interface TimerViewController () {
-    NSTimeInterval initialTimeSeconds;
-    NSTimeInterval remainingTimeSeconds;
-}
+#import "SteepController.h"
+
+@interface TimerViewController ()
+
+@property SteepController *sharedSteepController;
+
 @property IBOutlet UIButton *mainButton;
 @property IBOutlet UILabel *timerLabel;
 @property IBOutlet UIProgressView *progressBar;
-@property NSTimer *timer;
 
 @end
 
@@ -24,61 +25,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
+    self.sharedSteepController = [SteepController sharedSteepController];
 }
 
 -(void)dealloc {
-    //if (self.timer.isValid) [self.timer invalidate];
+    self.sharedSteepController.timerDelegate = nil;
+    [self.sharedSteepController cancelSteepTimer];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [self.mainButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [self.mainButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [self updateTimeDisplay];
 }
 
--(void)startCountdown {
-    initialTimeSeconds = [self.teaCountdownMinutes integerValue] * 60;
-    remainingTimeSeconds = initialTimeSeconds;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
-    [self updateTimeDisplay];
-}
+
 
 -(IBAction)dismiss:(id)sender {
-    if (self.timer.isValid) [self.timer invalidate];
+    [self.sharedSteepController cancelSteepTimer];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
         //
     }];
 }
 
+#pragma mark
+#pragma mark SteepTimerDelegate actions
 
--(void)tick {
-    NSLog(@"Thread: %@", [NSThread currentThread]);
-    [self updateTimeDisplay];
-    if (remainingTimeSeconds > 0) {
-        remainingTimeSeconds--;
-    }
-    else {
-        [self.timer invalidate];
-        [self.delegate teaTimerDidFinish:self];
-    }
-
+-(void)displayAlert:(NSString *)title withMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //
+    }];
+    [alertController addAction:alertAction];
+    [self presentViewController:alertController animated:YES completion:^{
+        //
+    }];
 }
 
--(void)updateTimeDisplay {
-    float div = (float)remainingTimeSeconds/(float)initialTimeSeconds;
+-(void)steepTimeRemaining:(NSTimeInterval)timeRemaining outOfSteepTime:(NSTimeInterval)initialTime {
+    float div = (float)timeRemaining/(float)initialTime;
 
-    NSInteger timeLeft = (NSInteger)remainingTimeSeconds;
+    NSInteger timeLeft = timeRemaining;
     NSInteger seconds = timeLeft % 60;
     NSInteger minutes = (timeLeft / 60) % 60;
     NSString *countdown = [NSString stringWithFormat:@"%02li:%02li", (long)minutes, (long)seconds];
 
     [self.progressBar setProgress:div animated:YES];
+
+    self.timerLabel.hidden = NO;
     self.timerLabel.text = countdown;
 
 
-    if (remainingTimeSeconds < 10) {
+    if (timeRemaining < 10) {
 
         CABasicAnimation *theAnimation;
 
@@ -90,23 +87,9 @@
         theAnimation.toValue=[NSNumber numberWithFloat:1.2];
         [self.timerLabel.layer addAnimation:theAnimation forKey:@"animateScale"];
     }
-    if (remainingTimeSeconds == 9) {
+    if (timeRemaining == 9) {
         self.timerLabel.textColor = [UIColor redColor];
         self.progressBar.progressTintColor = [UIColor redColor];
-    }
-    if (remainingTimeSeconds == 0) {
-        [self.mainButton setTitle:@"Done" forState:UIControlStateNormal];
-        [self.mainButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-        /*
-        CABasicAnimation *theAnimation;
-
-        theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        theAnimation.duration=1.0;
-        theAnimation.repeatCount=HUGE_VALF;
-        theAnimation.autoreverses=YES;
-        theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
-        theAnimation.toValue=[NSNumber numberWithFloat:1.3];
-        [self.mainButton.layer addAnimation:theAnimation forKey:@"animateScale"];*/
     }
 }
 

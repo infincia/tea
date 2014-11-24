@@ -18,8 +18,7 @@ UITableViewDataSource,
 UIPickerViewDataSource,
 UIPickerViewDelegate,
 UITextFieldDelegate,
-SteepControllerDelegate,
-TeaTimerDelegate>
+SteepControllerDelegate>
 
 
 @end
