@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import UIKit;
 @class HKQuantityType;
 
 typedef NS_ENUM(NSInteger, TeaType) {

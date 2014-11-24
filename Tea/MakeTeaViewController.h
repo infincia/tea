@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "SteepController.h"
 #import "TimerViewController.h"
 
