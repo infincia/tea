@@ -10,6 +10,8 @@
 
 #import "SteepController.h"
 #import "TimerViewController.h"
+#import "IASKAppSettingsViewController.h"
+#import "IASKSettingsReader.h"
 
 @interface MakeTeaViewController : UITableViewController
 
@@ -18,7 +20,8 @@ UITableViewDataSource,
 UIPickerViewDataSource,
 UIPickerViewDelegate,
 UITextFieldDelegate,
-SteepControllerDelegate>
+SteepControllerDelegate,
+IASKSettingsDelegate>
 
 
 @end

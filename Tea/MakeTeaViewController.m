@@ -12,8 +12,14 @@
 
 @interface MakeTeaViewController () {
     UITapGestureRecognizer *tapper;
+    IASKAppSettingsViewController *appSettingsViewController;
 }
-- (void)handleSingleTap:(UITapGestureRecognizer *)sender;
+-(void)handleSingleTap:(UITapGestureRecognizer *)sender;
+-(IBAction)showSettings:(id)sender;
+- (void)settingDidChange:(NSNotification*)notification;
+
+
+@property (nonatomic, strong) IASKAppSettingsViewController *appSettingsViewController;
 
 @property IBOutlet UITableView *configurationView;
 @property IBOutlet UIPickerView *teaType;
@@ -54,6 +60,7 @@
     tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
     [self configureCupForTeaType:[self.teaType selectedRowInComponent:0]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(settingDidChange:) name:kIASKAppSettingChanged object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
@@ -87,14 +94,52 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+
+    // Release any cached data, images, etc that aren't in use.
+    self.appSettingsViewController = nil;
+}
+
+#pragma mark - Tap Recognizer
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)sender {
     [self.view endEditing:YES];
 }
 
 
+#pragma mark - Settings
+
+- (IASKAppSettingsViewController*)appSettingsViewController {
+    if (!appSettingsViewController) {
+        appSettingsViewController = [[IASKAppSettingsViewController alloc] init];
+        appSettingsViewController.delegate = self;
+    }
+    return appSettingsViewController;
+}
 
 
+-(void)showSettings:(id)sender {
+    UINavigationController *aNavController = [[UINavigationController alloc] initWithRootViewController:self.appSettingsViewController];
+    aNavController.navigationBar.barStyle = UIBarStyleBlack;
+    [self.appSettingsViewController setShowCreditsFooter:NO];   // Uncomment to not display InAppSettingsKit credits for creators.
+    // But we encourage you not to uncomment. Thank you!
+    self.appSettingsViewController.showDoneButton = YES;
+    [self presentViewController:aNavController animated:YES completion:nil];
+}
+
+- (void)settingDidChange:(NSNotification*)notification {
+
+}
+
+#pragma mark IASKAppSettingsViewControllerDelegate protocol
+
+- (void)settingsViewControllerDidEnd:(IASKAppSettingsViewController*)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    // your code here to reconfigure the app for changed settings
+}
 
 #pragma mark
 #pragma mark SteepControllerDelegate

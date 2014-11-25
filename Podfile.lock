@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - iCarousel (1.8.1)
+  - InAppSettingsKit (2.3)
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.0)
-  - iCarousel
+  - iCarousel (= 1.8.1)
+  - InAppSettingsKit (= 2.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   iCarousel: 5acab560f10dc13da2440c89f35a0ad278b5147d
+  InAppSettingsKit: 96e3500969b31546b252b039ad6b2b8d82693a1a
 
 COCOAPODS: 0.35.0.rc2

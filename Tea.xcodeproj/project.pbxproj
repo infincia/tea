@@ -10,6 +10,7 @@
 		AA5E9A8F19FC8CDB0023D8DA /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5E9A8E19FC8CDB0023D8DA /* TimerViewController.m */; };
 		AA5E9A9219FCBB0B0023D8DA /* CupHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5E9A9119FCBB0B0023D8DA /* CupHistoryViewController.m */; };
 		AA5E9A9419FD91EF0023D8DA /* leaf-29432.svg in Resources */ = {isa = PBXBuildFile; fileRef = AA5E9A9319FD91EF0023D8DA /* leaf-29432.svg */; };
+		AA7EFCAB1A24E5FA002D319E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA7EFCAA1A24E5FA002D319E /* Settings.bundle */; };
 		AA9B61F819FBF9EA004645BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61F719FBF9EA004645BD /* main.m */; };
 		AA9B61FB19FBF9EA004645BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61FA19FBF9EA004645BD /* AppDelegate.m */; };
 		AA9B61FE19FBF9EA004645BD /* MakeTeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61FD19FBF9EA004645BD /* MakeTeaViewController.m */; };
@@ -41,6 +42,7 @@
 		AA5E9A9019FCBB0B0023D8DA /* CupHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CupHistoryViewController.h; sourceTree = "<group>"; };
 		AA5E9A9119FCBB0B0023D8DA /* CupHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CupHistoryViewController.m; sourceTree = "<group>"; };
 		AA5E9A9319FD91EF0023D8DA /* leaf-29432.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "leaf-29432.svg"; sourceTree = "<group>"; };
+		AA7EFCAA1A24E5FA002D319E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AA9B61F219FBF9EA004645BD /* Tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9B61F619FBF9EA004645BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9B61F719FBF9EA004645BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				AA5E9A9319FD91EF0023D8DA /* leaf-29432.svg */,
 				AA9B61F619FBF9EA004645BD /* Info.plist */,
 				AA9B61F719FBF9EA004645BD /* main.m */,
+				AA7EFCAA1A24E5FA002D319E /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				AA9B620419FBF9EA004645BD /* Main.storyboard in Resources */,
 				AA5E9A9419FD91EF0023D8DA /* leaf-29432.svg in Resources */,
+				AA7EFCAB1A24E5FA002D319E /* Settings.bundle in Resources */,
 				AA9B620919FBF9EA004645BD /* LaunchScreen.xib in Resources */,
 				AA9B620619FBF9EA004645BD /* Images.xcassets in Resources */,
 			);
