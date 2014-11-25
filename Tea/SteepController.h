@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, TeaType) {
 -(void)startSteepTimerForMinutes:(NSNumber *)steepTime;
 -(void)cancelSteepTimer;
 
--(void)addCupWithSize:(NSNumber *)size temperature:(NSNumber *)temperature caffeine:(NSNumber *)milligrams type:(enum TeaType)type;
+-(void)addCupWithSize:(NSNumber *)size temperature:(NSNumber *)temperature caffeine:(NSNumber *)milligrams type:(enum TeaType)type recordCaffeineToHealthkit:(BOOL)recordCaffeine;
 -(BOOL)isHealthDataAvailable;
 
 -(void)queryHistoryWithCompletion:(void (^)(HKQuantityType *quantityType, NSArray *results, NSError *))completion;

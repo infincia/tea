@@ -8,6 +8,7 @@
 
 #import "MakeTeaViewController.h"
 
+
 @import AudioToolbox;
 
 @interface MakeTeaViewController () {
@@ -28,6 +29,8 @@
 @property IBOutlet UITextField *waterTemperatureField;
 @property IBOutlet UITextField *steepTimeField;
 @property IBOutlet UITextField *caffeineField;
+
+@property IBOutlet UISwitch *caffeineSwitch;
 
 @property IBOutlet UIButton *makeTeaButton;
 
@@ -348,7 +351,8 @@
 #pragma mark SteepControllerDelegate actions
 
 -(void)steepDidFinish:(id)sender {
-    [self submitCupToHealthkit];
+    [[SteepController sharedSteepController] addCupWithSize:self.cupOunces temperature:self.waterTemp caffeine:self.caffeine type:[self.teaType selectedRowInComponent:0] recordCaffeineToHealthkit:self.caffeineSwitch.isOn];
+
     [self dismissViewControllerAnimated:YES completion:^{
         if ([[SteepController sharedSteepController] isBackgrounded]) {
             UILocalNotification *steepFinishedNotification = [[UILocalNotification alloc] init];
@@ -381,11 +385,6 @@
 
 #pragma mark
 #pragma mark SteepController actions
-
--(void)submitCupToHealthkit {
-    [[SteepController sharedSteepController] addCupWithSize:self.cupOunces temperature:self.waterTemp caffeine:self.caffeine type:[self.teaType selectedRowInComponent:0]];
-}
-
 
 
 

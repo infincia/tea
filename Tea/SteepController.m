@@ -79,7 +79,6 @@
 
 -(void)tick {
     [self.timerDelegate steepTimeRemaining:remainingTimeSeconds outOfSteepTime:initialTimeSeconds];
-    NSLog(@"Remaining background time: %f", [UIApplication sharedApplication].backgroundTimeRemaining);
     if (remainingTimeSeconds > 0) {
         remainingTimeSeconds--;
     }
@@ -127,7 +126,8 @@
     return [HKHealthStore isHealthDataAvailable];
 }
 
--(void)addCupWithSize:(NSNumber *)size temperature:(NSNumber *)temperature caffeine:(NSNumber *)milligrams type:(enum TeaType)type {
+-(void)addCupWithSize:(NSNumber *)size temperature:(NSNumber *)temperature caffeine:(NSNumber *)milligrams type:(enum TeaType)type recordCaffeineToHealthkit:(BOOL)recordCaffeine {
+    if (!recordCaffeine) return;
     if (!self.authorization == HKAuthorizationStatusSharingAuthorized) {
         return;
     }

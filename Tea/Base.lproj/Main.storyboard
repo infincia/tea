@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuX-4r-km8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="-832"/>
+            <point key="canvasLocation" x="3278" y="-832"/>
         </scene>
         <!--MakeTeaViewController-->
         <scene sceneID="g2j-bP-hll">
@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Tea Type" id="UGb-hr-GWI">
+                            <tableViewSection headerTitle="Tea Type" id="UGb-hr-GWI" userLabel="Tea Type Section">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="142" id="cbe-Qt-oMl">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -79,7 +79,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Steeping" id="ulY-lX-tJy">
+                            <tableViewSection headerTitle="Steeping" id="ulY-lX-tJy" userLabel="Steeping Section">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oDW-45-fPN">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -211,14 +211,41 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="j1O-Gc-kxX">
+                            <tableViewSection headerTitle="HealthKit" id="j1O-Gc-kxX" userLabel="HealthKit Section">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ovW-m8-fCT">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ovW-m8-fCT" id="7jp-ka-vxj">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTS-1V-tzq">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbz-61-n7b">
+                                                    <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Caffeine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSL-XT-b1s">
+                                                    <rect key="frame" x="8" y="11" width="107" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hbz-61-n7b" firstAttribute="centerY" secondItem="cSL-XT-b1s" secondAttribute="centerY" id="X5n-pB-kB5"/>
+                                                <constraint firstItem="Hbz-61-n7b" firstAttribute="trailing" secondItem="7jp-ka-vxj" secondAttribute="trailingMargin" id="a0S-N9-TNW"/>
+                                                <constraint firstItem="cSL-XT-b1s" firstAttribute="centerY" secondItem="7jp-ka-vxj" secondAttribute="centerY" id="gQI-Op-ofT"/>
+                                                <constraint firstItem="cSL-XT-b1s" firstAttribute="leading" secondItem="7jp-ka-vxj" secondAttribute="leadingMargin" id="pJz-jv-t4q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="w1k-KV-Rwb" userLabel="Make Tea Button Section">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UM9-m3-MyZ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UM9-m3-MyZ" id="7Es-zl-tlg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3u-d5-cgs">
                                                     <rect key="frame" x="262" y="11" width="76" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -226,12 +253,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RTS-1V-tzq" firstAttribute="centerY" secondItem="7jp-ka-vxj" secondAttribute="centerY" id="vCC-BC-532"/>
-                                                <constraint firstItem="RTS-1V-tzq" firstAttribute="centerX" secondItem="7jp-ka-vxj" secondAttribute="centerX" id="xeq-BU-gpA"/>
+                                                <constraint firstItem="c3u-d5-cgs" firstAttribute="centerY" secondItem="7Es-zl-tlg" secondAttribute="centerY" id="GWu-Ed-SAA"/>
+                                                <constraint firstItem="c3u-d5-cgs" firstAttribute="centerX" secondItem="7Es-zl-tlg" secondAttribute="centerX" id="bs5-dK-rKn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5z1-nr-NGK" kind="presentation" identifier="TeaTimerSegue" modalTransitionStyle="partialCurl" id="zai-Nq-bx5"/>
+                                            <segue destination="5z1-nr-NGK" kind="presentation" identifier="TeaTimerSegue" modalTransitionStyle="partialCurl" id="NOz-Gz-RXt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -242,11 +269,17 @@
                             <outlet property="delegate" destination="BIh-cg-lja" id="hx1-Cc-51C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Zig-25-9ud">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BTr-AG-hDl"/>
+                    <navigationItem key="navigationItem" title="Tea" id="Zig-25-9ud">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="BTr-AG-hDl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="uO7-NK-uVP">
+                            <connections>
+                                <action selector="showSettings:" destination="BIh-cg-lja" id="fRb-KW-Cxy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="caffeineField" destination="f7B-B6-mdo" id="AYv-Qi-VEf"/>
+                        <outlet property="caffeineSwitch" destination="Hbz-61-n7b" id="hWd-vR-pBi"/>
                         <outlet property="cupSizeField" destination="OEi-is-KMv" id="xAi-Of-jVB"/>
                         <outlet property="steepTimeField" destination="T8D-9B-XOl" id="XA7-6z-EG1"/>
                         <outlet property="teaType" destination="nCd-SV-hSo" id="35k-SK-yke"/>
