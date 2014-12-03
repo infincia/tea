@@ -20,7 +20,7 @@
 - (void)settingDidChange:(NSNotification*)notification;
 
 
-@property (nonatomic, strong) IASKAppSettingsViewController *appSettingsViewController;
+@property (nonatomic, strong, readonly) IASKAppSettingsViewController *appSettingsViewController;
 
 @property IBOutlet UITableView *configurationView;
 @property IBOutlet UIPickerView *teaType;
@@ -42,6 +42,7 @@
 @end
 
 @implementation MakeTeaViewController
+@dynamic appSettingsViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -102,7 +103,7 @@
     [super didReceiveMemoryWarning];
 
     // Release any cached data, images, etc that aren't in use.
-    self.appSettingsViewController = nil;
+    appSettingsViewController = nil;
 }
 
 #pragma mark - Tap Recognizer
