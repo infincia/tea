@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		6383E005DD50D240B3276606 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AA2B681D1A57C95400DB051B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA5E9A8D19FC8CDB0023D8DA /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		AA5E9A8E19FC8CDB0023D8DA /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		AA5E9A9019FCBB0B0023D8DA /* CupHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CupHistoryViewController.h; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		AA9B61E919FBF9EA004645BD = {
 			isa = PBXGroup;
 			children = (
+				AA2B681D1A57C95400DB051B /* README.md */,
 				AA9B61F419FBF9EA004645BD /* Tea */,
 				AA9B621119FBF9EA004645BD /* TeaTests */,
 				AA9B61F319FBF9EA004645BD /* Products */,
