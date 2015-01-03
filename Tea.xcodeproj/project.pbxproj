@@ -97,6 +97,7 @@
 		69089AF3FACC279003B250AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA9B621F19FBFA50004645BD /* CloudKit.framework */,
 				B6B6EA20AB15F278D1EE637A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -105,7 +106,6 @@
 		AA9B61E919FBF9EA004645BD = {
 			isa = PBXGroup;
 			children = (
-				AA9B621F19FBFA50004645BD /* CloudKit.framework */,
 				AA9B61F419FBF9EA004645BD /* Tea */,
 				AA9B621119FBF9EA004645BD /* TeaTests */,
 				AA9B61F319FBF9EA004645BD /* Products */,
