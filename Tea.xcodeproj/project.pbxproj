@@ -20,7 +20,6 @@
 		AA9B620919FBF9EA004645BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9B620719FBF9EA004645BD /* LaunchScreen.xib */; };
 		AA9B621519FBF9EA004645BD /* TeaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B621419FBF9EA004645BD /* TeaTests.m */; };
 		AA9B622019FBFA50004645BD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9B621F19FBFA50004645BD /* CloudKit.framework */; };
-		AA9B622219FBFAB9004645BD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9B622119FBFAB9004645BD /* HealthKit.framework */; };
 		AA9B622519FC3E9A004645BD /* SteepController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B622419FC3E9A004645BD /* SteepController.m */; };
 		CC8217BA2B15A96C388FB63B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B6EA20AB15F278D1EE637A /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -60,7 +59,6 @@
 		AA9B621419FBF9EA004645BD /* TeaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeaTests.m; sourceTree = "<group>"; };
 		AA9B621E19FBFA32004645BD /* Tea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Tea.entitlements; sourceTree = "<group>"; };
 		AA9B621F19FBFA50004645BD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		AA9B622119FBFAB9004645BD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		AA9B622319FC3E9A004645BD /* SteepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteepController.h; sourceTree = "<group>"; };
 		AA9B622419FC3E9A004645BD /* SteepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteepController.m; sourceTree = "<group>"; };
 		B6B6EA20AB15F278D1EE637A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9B622019FBFA50004645BD /* CloudKit.framework in Frameworks */,
-				AA9B622219FBFAB9004645BD /* HealthKit.framework in Frameworks */,
 				CC8217BA2B15A96C388FB63B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +105,6 @@
 		AA9B61E919FBF9EA004645BD = {
 			isa = PBXGroup;
 			children = (
-				AA9B622119FBFAB9004645BD /* HealthKit.framework */,
 				AA9B621F19FBFA50004645BD /* CloudKit.framework */,
 				AA9B61F419FBF9EA004645BD /* Tea */,
 				AA9B621119FBF9EA004645BD /* TeaTests */,
