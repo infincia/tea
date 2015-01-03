@@ -270,7 +270,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tea" id="Zig-25-9ud">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="BTr-AG-hDl"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="uO7-NK-uVP">
                             <connections>
                                 <action selector="showSettings:" destination="BIh-cg-lja" id="fRb-KW-Cxy"/>
