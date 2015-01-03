@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
-#import "TimerViewController.h"
 @import QuartzCore;
 
+#import "TimerViewController.h"
 #import "SteepController.h"
 
 @interface TimerViewController ()

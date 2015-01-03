@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
-#import "SteepController.h"
 @import HealthKit;
 
+
+#import "SteepController.h"
 
 
 @interface SteepController  () {

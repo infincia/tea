@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
+@import HealthKit;
+
 #import "CupHistoryViewController.h"
 #import "SteepController.h"
-@import HealthKit;
+
 
 
 @interface CupHistoryViewController ()
