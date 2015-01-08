@@ -2,10 +2,11 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
+@import AudioToolbox;
+
 #import "MakeTeaViewController.h"
 
 
-@import AudioToolbox;
 
 @interface MakeTeaViewController () {
     UITapGestureRecognizer *tapper;

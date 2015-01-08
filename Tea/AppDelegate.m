@@ -2,8 +2,9 @@
 //  Copyright (c) 2014 Infincia LLC. All rights reserved.
 //
 
-#import "AppDelegate.h"
 @import HealthKit;
+
+#import "AppDelegate.h"
 
 @interface AppDelegate ()
 @property (nonatomic, getter=isBackgrounded) BOOL backgrounded;
