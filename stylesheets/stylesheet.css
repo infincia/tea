@@ -103,6 +103,10 @@ header h2 {
 	text-align: center;
 }
 
+#container .inner .screenshot img {
+	max-width: 50%;
+}
+
 #downloads {
   margin-bottom: 40px;
 }
