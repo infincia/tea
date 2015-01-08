@@ -16,7 +16,6 @@
 		AA9B61F819FBF9EA004645BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61F719FBF9EA004645BD /* main.m */; };
 		AA9B61FB19FBF9EA004645BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61FA19FBF9EA004645BD /* AppDelegate.m */; };
 		AA9B61FE19FBF9EA004645BD /* MakeTeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B61FD19FBF9EA004645BD /* MakeTeaViewController.m */; };
-		AA9B620119FBF9EA004645BD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B620019FBF9EA004645BD /* SecondViewController.m */; };
 		AA9B620419FBF9EA004645BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9B620219FBF9EA004645BD /* Main.storyboard */; };
 		AA9B620619FBF9EA004645BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9B620519FBF9EA004645BD /* Images.xcassets */; };
 		AA9B620919FBF9EA004645BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9B620719FBF9EA004645BD /* LaunchScreen.xib */; };
@@ -52,8 +51,6 @@
 		AA9B61FA19FBF9EA004645BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AA9B61FC19FBF9EA004645BD /* MakeTeaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeTeaViewController.h; sourceTree = "<group>"; };
 		AA9B61FD19FBF9EA004645BD /* MakeTeaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeTeaViewController.m; sourceTree = "<group>"; };
-		AA9B61FF19FBF9EA004645BD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		AA9B620019FBF9EA004645BD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		AA9B620319FBF9EA004645BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA9B620519FBF9EA004645BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA9B620819FBF9EA004645BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				AA9B61FA19FBF9EA004645BD /* AppDelegate.m */,
 				AA9B61FC19FBF9EA004645BD /* MakeTeaViewController.h */,
 				AA9B61FD19FBF9EA004645BD /* MakeTeaViewController.m */,
-				AA9B61FF19FBF9EA004645BD /* SecondViewController.h */,
-				AA9B620019FBF9EA004645BD /* SecondViewController.m */,
 				AA9B620219FBF9EA004645BD /* Main.storyboard */,
 				AA9B620519FBF9EA004645BD /* Images.xcassets */,
 				AA9B620719FBF9EA004645BD /* LaunchScreen.xib */,
@@ -331,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5E9A8F19FC8CDB0023D8DA /* TimerViewController.m in Sources */,
-				AA9B620119FBF9EA004645BD /* SecondViewController.m in Sources */,
 				AA9B622519FC3E9A004645BD /* SteepController.m in Sources */,
 				AA5E9A9219FCBB0B0023D8DA /* CupHistoryViewController.m in Sources */,
 				AA086DA81A5EF73E006C9731 /* LICENSE.md in Sources */,
