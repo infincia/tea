@@ -3,7 +3,7 @@
 //
 
 @import HealthKit;
-
+@import CloudKit;
 
 #import "SteepController.h"
 
