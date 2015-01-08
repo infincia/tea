@@ -274,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA086DA91A5EFBA6006C9731 /* LICENSE.md in Resources */,
 				AA9B620419FBF9EA004645BD /* Main.storyboard in Resources */,
 				AA5E9A9419FD91EF0023D8DA /* leaf-29432.svg in Resources */,
 				AA7EFCAB1A24E5FA002D319E /* Settings.bundle in Resources */,
