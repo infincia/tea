@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA086DA81A5EF73E006C9731 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = AA086DA71A5EF73E006C9731 /* LICENSE.md */; };
+		AA086DA91A5EFBA6006C9731 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = AA086DA71A5EF73E006C9731 /* LICENSE.md */; };
 		AA5E9A8F19FC8CDB0023D8DA /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5E9A8E19FC8CDB0023D8DA /* TimerViewController.m */; };
 		AA5E9A9219FCBB0B0023D8DA /* CupHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5E9A9119FCBB0B0023D8DA /* CupHistoryViewController.m */; };
 		AA5E9A9419FD91EF0023D8DA /* leaf-29432.svg in Resources */ = {isa = PBXBuildFile; fileRef = AA5E9A9319FD91EF0023D8DA /* leaf-29432.svg */; };
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		6383E005DD50D240B3276606 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AA086DA71A5EF73E006C9731 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		AA2B681D1A57C95400DB051B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA5E9A8D19FC8CDB0023D8DA /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		AA5E9A8E19FC8CDB0023D8DA /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		AA9B61E919FBF9EA004645BD = {
 			isa = PBXGroup;
 			children = (
+				AA086DA71A5EF73E006C9731 /* LICENSE.md */,
 				AA2B681D1A57C95400DB051B /* README.md */,
 				AA9B61F419FBF9EA004645BD /* Tea */,
 				AA9B621119FBF9EA004645BD /* TeaTests */,
@@ -333,6 +337,7 @@
 				AA9B620119FBF9EA004645BD /* SecondViewController.m in Sources */,
 				AA9B622519FC3E9A004645BD /* SteepController.m in Sources */,
 				AA5E9A9219FCBB0B0023D8DA /* CupHistoryViewController.m in Sources */,
+				AA086DA81A5EF73E006C9731 /* LICENSE.md in Sources */,
 				AA9B61FB19FBF9EA004645BD /* AppDelegate.m in Sources */,
 				AA9B61FE19FBF9EA004645BD /* MakeTeaViewController.m in Sources */,
 				AA9B61F819FBF9EA004645BD /* main.m in Sources */,
