@@ -1,5 +1,7 @@
 #Tea
 
+**Note See the [github.io](http://infincia.github.io/tea/) page for screenshots**
+
 Tea is an app that may never see the App Store, it's primarily just for my own use at the moment.
 
 It's basically a HealthKit integrated tea timer, to keep track of caffeine intake automatically while making cups of tea :)
