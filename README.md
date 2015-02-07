@@ -1,6 +1,12 @@
 #Tea
 
-**Note See the [github.io](http://infincia.github.io/tea/) page for screenshots**
+**Note: see the [github.io](http://infincia.github.io/tea/) page for easier reading and better styled screenshots.**
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/main.png" alt="Main screen"/>
+</p>
+
+*Scroll down for more screenshots*
 
 Tea is an app that may never see the App Store, it's primarily just for my own use at the moment.
 
@@ -24,3 +30,26 @@ There is no preference saving of any kind, so for example anything you enter in 
 * Custom tea types with corresponding steep settings saved in iCloud
 * Water mineral content settings (if you measure or know yours)
 * A smarter caffeine calculation algorithm than what is there now
+
+####Screenshots
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/main.png" alt="Main screen"/>
+</p>
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/timer.png" alt="Timer countdown"/>
+</p>
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/timer-end.png" alt="Time near end"/>
+</p>
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/finished.png" alt="Timer finished"/>
+</p>
+
+<p align="center">
+  <img src="http://infincia.github.io/tea/screenshots/1.0/notification.png" alt="Local notification/>
+</p>
+
